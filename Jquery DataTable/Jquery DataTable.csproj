@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\G2M Application\Web\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Energizer.Data, Version=2.0.4.12659, Culture=neutral, PublicKeyToken=f075a987c6930bbb">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\G2M Application\Web\Bin\Energizer.Data.dll</HintPath>
@@ -67,6 +70,12 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement">
+      <HintPath>C:\G2M Application\Web\Bin\Microsoft.ApplicationBlocks.ExceptionManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces">
+      <HintPath>C:\G2M Application\Web\Bin\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
@@ -93,10 +102,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Theme\Javascript\bootstrap.min.js" />
+    <Content Include="App_Themes\Theme\CSS\buttons.dataTables.min.css" />
+    <Content Include="App_Themes\Theme\Javascript\buttons.flash.min.js.js" />
+    <Content Include="App_Themes\Theme\Javascript\buttons.html5.min.js" />
+    <Content Include="App_Themes\Theme\Javascript\buttons.print.min.js" />
+    <Content Include="App_Themes\Theme\Javascript\Common.js" />
+    <Content Include="App_Themes\Theme\Javascript\dataTables.buttons.min.js" />
+    <Content Include="Default.master.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="App_Themes\Theme\Javascript\jquery-3.0.0.min.js" />
+    <Content Include="App_Themes\Theme\CSS\jquery.dataTables.css" />
+    <Content Include="App_Themes\Theme\Javascript\jquery.dataTables.min.js" />
+    <Content Include="App_Themes\Theme\Javascript\jszip.min.js.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Default.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,7 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.html" />
+    <Content Include="App_Themes\Theme\Javascript\pdfmake.min.js" />
     <Content Include="TableData.aspx" />
+    <Content Include="App_Themes\Theme\Javascript\vfs_fonts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +144,9 @@
     <Compile Include="TableData.aspx.designer.cs">
       <DependentUpon>TableData.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

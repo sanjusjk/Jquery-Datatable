@@ -1,0 +1,46 @@
+<%@ Master Language="VB" CodeFile="Default.master.vb" Inherits="MasterPages_Default" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>View My Work Summary</title>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+    <%--<link rel="stylesheet" type="text/css" href="../App_Themes/Go2MarketV2/bootstrap.min.css" >--%>
+<link rel="stylesheet" type="text/css" href="App_Themes/Theme/CSS/jquery.dataTables.css" />
+<link rel="stylesheet" type="text/css" href="App_Themes/Theme/CSS/buttons.dataTables.min.css" />
+
+</head>
+
+<script type="text/javascript" language="javascript" src="<%=Page.ResolveClientUrl("~/App_Themes/Theme/Javascript/Common.js") %>" ></script>
+
+
+<script type="text/javascript" language="javascript" src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/jquery-3.0.0.min.js") %>" ></script>
+<script type="text/javascript" language="javascript" src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/bootstrap.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/jquery.dataTables.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/dataTables.buttons.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/buttons.flash.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/jszip.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/pdfmake.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/vfs_fonts.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/buttons.html5.min.js") %>" ></script>
+<script type="text/javascript" language="javascript"  src="<%= page.ResolveClientUrl("~/App_Themes/Theme/Javascript/buttons.print.min.js") %>" ></script>
+<body>
+
+    <form id="form1" runat="server">
+       <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div>
+            <!-- The ID of the header control referenced on a few 
+        other pages.  Please do not change. -->
+            
+                <asp:ContentPlaceHolder ID="TaskBarContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            <div id="TopContentSpacer" class="ContentSpacer" />
+             <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+             </asp:ContentPlaceHolder>
+            <img src="<%= page.ResolveClientUrl("~/images/spacer.gif") %>" width="100%" height="1"
+                id="BottomContentSpacer" />
+        </div>
+        
+    </form>
+</body>
+</html>

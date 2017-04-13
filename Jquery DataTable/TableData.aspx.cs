@@ -44,7 +44,7 @@ namespace Jquery_DataTable
                 projectTasks = GetMyWorkSummary(sqlCommand, connetionString);
                 if (projectTasks !=null )
                 {
-                    jsonObject = JsonConvert.SerializeObject(projectTasks, Formatting.Indented);
+                    jsonObject = JsonConvert.SerializeObject(projectTasks.Tables[0], Formatting.Indented);
                 }
                 
             }
