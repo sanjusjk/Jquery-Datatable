@@ -9,6 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace Jquery_DataTable
 {
@@ -30,7 +31,8 @@ namespace Jquery_DataTable
         {
             string connetionString = null;
             SqlConnection con;
-            connetionString = "Data Source=USSTL-SQLDev.care.corp;Initial Catalog=DrugsDB;User ID=Go2MarketUser;Password=NewDay2014";
+            
+            connetionString = ConfigurationManager.AppSettings["ConnectionString"];
             con = new SqlConnection(connetionString);
             DataSet projectTasks;
             try
